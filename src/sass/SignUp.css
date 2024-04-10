@@ -1,61 +1,13 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-.main{
-    
-    width: 100vw;
-    min-height: 100vh;
-    background-image: url(./images/home.jpg);
-    background-size: cover;
-    background-repeat: repeat;
-
-    
-    
-}
-.header{
-    
-  align-items: center;
-    height: 100px;
-   justify-content: center;
-   display: flex;
-
-}
-
-.main-menu{
+.head{
     width: 100%;
-   display: flex;
-}
-.menu{
-    width: 60%;
-}
-.login{
-width: 40%;
-display: flex;
-justify-content: center;
-margin-top: 50px;
-}
-.loginform{
-  
-    height: 500px;
-    width: 300px;
-    border-radius: 30px;
-    text-align: center;
-    flex-direction: column;
+    min-height: 100vh;
+    background-color: cornflowerblue;
     display: flex;
-    align-items: center;
+   justify-content: center;
+   align-items: center;
 }
 
-  .headerTitle{
-    color: aliceblue;
-
-    
-  }
- 
-  
-  .row{
+.signUpPage{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -64,16 +16,15 @@ margin-top: 50px;
     
   }
   
-  .row input{
+  .signUpPage input{
     width: 80%;
     box-sizing: border-box;
     border: none;
-    font-size: 1.1rem;
+    font-size: 1rem;
     padding-left: 1.5rem;
     padding-bottom: 1rem;
     box-shadow: inset 0px -3px 0px 0px rgba(187,187,187,0.2);
     transition: box-shadow 0.2s ease-in;
-    border-radius: 20px;
     display: flex;
     justify-content: center;
     text-align: center;
@@ -83,31 +34,31 @@ margin-top: 50px;
 
   }
   
-  .row input:focus{
+  .signUpPage input:focus{
      box-shadow: inset 0px -3px 0px 0px rgba(34,193,195,0.7);
      outline: none;
   }
   
-  .row input::-webkit-input-placeholder{
+  .signUpPage input::-webkit-input-placeholder{
     opacity: 1rem;
     transition: opacity 0.25s ease-out;
    
   }
   
-  .row input:hover::-webkit-input-placeholder,
-  .row input:focus::-webkit-input-placeholder{
+  .signUpPage input:hover::-webkit-input-placeholder,
+  .signUpPage input:focus::-webkit-input-placeholder{
     opacity: 0;
   }
   
-  .row label{
+  .signUpPage label{
     align-self: start;
-    padding-left: 2.5rem;
+    padding-left: 1.6rem;
     color:white;
     font-size: large;
   }
   
-  .row button{
-    border-radius: 25px;
+  .signUpPage button{
+    
     width: 80%;
     height: 40px;
     font-size: 1.3rem;
@@ -120,6 +71,7 @@ margin-top: 50px;
     transition: opacity 0.25s ease-out;
     padding :.5rem;
     margin-bottom: 20px;
+    margin-top: 10px;
     
     display: flex;
     
@@ -129,7 +81,13 @@ margin-top: 50px;
     
   }
   
-  .row button:hover{
+  .signUpPage button:hover{
     opacity: 0.8;
   }
-
+  .link{
+    color: chartreuse;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: larger;
+      }
+      
