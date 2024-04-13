@@ -1,40 +1,20 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import "./App.css";
-import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import { Provider } from "react-redux";
+import store from "./store";
 import reportWebVitals from "./reportWebVitals";
 import { ToastContainer } from "react-toastify";
-import App from "./App";
-import NotFounded from "./NotFounded";
-import SignUp from "./pages/SignUp";
-import "./sass/SignUp.css";
+import App from "./App.js";
 import "./styles/index.scss";
-
-
-const router = createBrowserRouter([
-  {
-    path: "/",
-    element: <App />,
-  },
-  {
-    path: "signup",
-    element: <SignUp />,
-  },
-  {
-    path: "*",
-    element: <NotFounded />,
-
-  },
-]);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <React.StrictMode>
-    <div className="app">
-      <RouterProvider router={router} />
-      <ToastContainer />
-    </div>
-  </React.StrictMode >
+  <div className="app">
+    <Provider store={store}>
+      <App />
+    </Provider>
+    <ToastContainer />
+  </div>
 );
 
 // If you want to start measuring performance in your app, pass a function

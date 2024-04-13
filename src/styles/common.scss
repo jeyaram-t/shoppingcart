@@ -32,6 +32,8 @@
 .overlay-loader {
   width: 100vw;
   height: 100vh;
+  top: 0;
+  left: 0;
   background-color: $shade;
   opacity: 0.2;
   position: fixed;
