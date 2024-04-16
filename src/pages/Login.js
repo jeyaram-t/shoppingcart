@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
-import { setUserName } from "../store/slices/appSlice";
+import { actions } from "../store/slices/appSlice";
 import { Navigate, useNavigate } from "react-router-dom";
 import axios from "axios";
 import OverlaySpinner from "../components/OverlaySpinner";
@@ -16,7 +16,7 @@ const Login = () => {
   const dispatch = useDispatch();
 
   const loginClick = async () => {
-    if (loginName.trim().length !== "" && loginPassword.trim().length !== "")
+    if (loginName.trim().length > 2 && loginPassword.trim().length > 4)
       try {
         setLoader(true);
         const payload = {
@@ -25,7 +25,7 @@ const Login = () => {
         };
         const res = await axios.post(`${apiURL}auth/login`, payload);
         setTimeout(() => {
-          dispatch(setUserName(loginName));
+          dispatch(actions.setUserName(loginName));
           localStorage.setItem("accessToken", res.data.token);
           toast.success("Logged in successfully");
           navigate("/");
@@ -38,7 +38,7 @@ const Login = () => {
   };
 
   const handleClik = () => {
-    navigate("signup");
+    navigate("/signup");
   };
 
   return (

@@ -1,0 +1,40 @@
+/* .container-fluid{
+ height: 50px;
+}
+.user-login{
+    margin:0 20px;
+    cursor: pointer;
+}
+
+.user-login div{
+padding-bottom: 5px;
+} */
+.navbar{
+ 
+    color: white !important;
+    display: flex;
+   height: 70px;
+  
+}
+.form-inline{
+  display: flex;
+}
+.nav{
+  &> div{
+    padding-right: 15px;
+  }
+display: flex;
+align-items: center;
+margin-right: 20px;
+
+}
+.nav button{
+  margin-left: 10px;
+}
+.cart-icon{
+  background-color: none;
+}
+.form{
+  display: flex;
+  width: 40%;
+}

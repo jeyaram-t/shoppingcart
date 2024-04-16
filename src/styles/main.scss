@@ -53,6 +53,7 @@
   align-items: center;
   padding-top: 2rem;
   max-width: 100%;
+  justify-content: center;
 }
 
 .row input {
@@ -89,8 +90,9 @@
 }
 
 .row label {
-  align-self: start;
+ display: flex;
 
+justify-content: center;
   color: white;
   font-size: large;
 }
@@ -99,7 +101,7 @@
   border-radius: 25px;
   width: 80%;
   height: 40px;
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   color: white;
   font-weight: 700;
   background: rgb(34, 193, 195);
@@ -116,4 +118,10 @@
 
 .row button:hover {
   opacity: 0.8;
+}
+.text-center {
+  
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
