@@ -10,19 +10,26 @@ const slice = createSlice({
     setUserName: (state, action) => {
       state.userName = action.payload;
     },
-    addCartItem: (state, {payload}) => {
+    addCartItem: (state, { payload }) => {
       const prductIndex = state.cartItems.findIndex(item => item.id === payload.id);
       if (prductIndex !== -1) {
         state.cartItems[prductIndex].count += 1;
       }
-      else state.cartItems.push({id: payload.id, count: 1, product: payload});
+      else state.cartItems.push({ id: payload.id, count: 1, product: payload });
     },
-    removeCartItem: (state, {payload}) => {
-      const prductIndex = state.cartItems.findIndex(item => item.id === payload.id);
-      if (prductIndex !== -1) {
-        if (state.cartItems[prductIndex].count === 1) {
-          state.cartItems.splice(prductIndex, 1);
-        } else state.cartItems[prductIndex].count -= 1;
+    removeCartItem: (state, { payload }) => {
+      if (Number.isInteger(payload) === true) {
+        const prductIndex = state.cartItems.findIndex(item => item.id === payload);
+        state.cartItems.splice(prductIndex, 1);
+      }
+      else {
+        const prductIndex = state.cartItems.findIndex(item => item.id === payload.id);
+        if (prductIndex !== -1) {
+          if (state.cartItems[prductIndex].count === 1) {
+            state.cartItems.splice(prductIndex, 1);
+  
+          } else state.cartItems[prductIndex].count -= 1;
+        }
       }
     },
     clearCart: state => {

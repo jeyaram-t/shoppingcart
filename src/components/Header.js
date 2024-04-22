@@ -37,7 +37,7 @@ const Header = () => {
           >
             <img src="cart.png" alt="Cart" />
           </div>
-          <div onClick={() => navigate("/")}>Home</div>
+          <div role="button" onClick={() => navigate("/")}>Home</div>
           <div>{userName}</div>
           <button className="btn btn-success" onClick={logout}>Logout</button>
         </div>
