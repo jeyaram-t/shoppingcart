@@ -15,10 +15,9 @@ const Cart = () => {
   }, [dispatch]);
 
   const removFromCart = useCallback(product => {
-    dispatch(actions.removeCartItem(product))
+    dispatch(actions.removeCartItem(product));
   }, [dispatch]);
 
-  console.log(cartItems);
   return (
     <div>
       {cartItems.map((item) =>
@@ -55,7 +54,7 @@ const Cart = () => {
 
           </div>
         </div>
-      )};
+      )}
     </div>
   );
 };
